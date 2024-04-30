@@ -4,6 +4,8 @@ import {validateMovie} from "../middlewares/movie-validation";
 
 const router = Router();
 
+
+
 router.get("/",getAllMovies);
 
 router.get("/:id",getMovieById);
