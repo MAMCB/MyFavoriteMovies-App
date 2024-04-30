@@ -10,6 +10,7 @@ const client = new Client({
   database: process.env.PGDATABASE,
   password: process.env.PGPASSWORD,
   port: parseInt(process.env.PGPORT!), // Default PostgreSQL port is 5432
+  
 
   ssl: {
     rejectUnauthorized: false,
