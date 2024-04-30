@@ -1,12 +1,17 @@
 import { Router } from "express";
+import { getAllMovies,getMovieById,addMovie } from "../controllers/movies-controllers";
+import {validateMovie} from "../middlewares/movie-validation";
+
 const router = Router();
 
-router.get("/");
+router.get("/",getAllMovies);
+
+router.get("/:id",getMovieById);
 
 
-router.post("/");
+router.post("/",validateMovie,addMovie);
 
-router.patch("/:id");
+router.put("/:id");
 
 router.delete("/:id");
 
